@@ -2,7 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const formatDate = require('./formatDate');
+require('dotenv').config();
 
+const port = process.env.PORT;
 const app = express();
 const baseURL = 'https://orderstatusapi-dot-organization-project-311520.uc.r.appspot.com/api/getOrderStatus';
 
@@ -38,4 +40,4 @@ app.post('/', async (request,response)=> {
     response.json(res);
 });
 
-app.listen(3000);
+app.listen(port || 3000);
