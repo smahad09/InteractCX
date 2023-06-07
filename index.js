@@ -28,7 +28,12 @@ app.post('/', async (request,response)=> {
         fulfillmentMessages: [{ 
             text: {
                 text: [`Your order ${orderId} will be shipped on ${shipmentDate}, please wait a while!`]
-            }
+            },
+            payload: {
+                audio: {
+                  audioUri: "https://res.cloudinary.com/dclenbevx/video/upload/v1686001978/InteractCX/dance_ldasrq.mp3"
+                }
+              }
         }]
     };
 
