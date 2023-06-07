@@ -25,15 +25,11 @@ app.post('/', async (request,response)=> {
 
     const res = {
         fulfillmentText: `Your order ${orderId} will be shipped on ${shipmentDate}`,
-        fulfillmentMessages: [
-    {
-      payload: {
-        audio: {
-          audioUri: "https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg"
-        }
-      }
-    }
-  ]
+        fulfillmentMessages: [{ 
+            text: {
+                text: [`Your order ${orderId} will be shipped on ${shipmentDate}`]
+            }
+        }]
     };
 
     response.json(res);
