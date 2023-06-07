@@ -27,7 +27,7 @@ app.post('/', async (request,response)=> {
         fulfillmentText: `Your order ${orderId} will be shipped on ${shipmentDate}`,
         fulfillmentMessages: [{ 
             text: {
-                text: [`Your order ${orderId} will be shipped on ${shipmentDate}`]
+                text: [`Your order ${orderId} will be shipped on ${shipmentDate}, please wait a while!`]
             }
         }]
     };
