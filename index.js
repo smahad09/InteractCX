@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const path = require('path');
 const formatDate = require('./formatDate');
 require('dotenv').config();
 
@@ -10,7 +11,14 @@ const app = express();
 const baseURL = 'https://orderstatusapi-dot-organization-project-311520.uc.r.appspot.com/api/getOrderStatus';
 
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
+
+
+app.get('/', (request,response)=> {
+    response.sendFile('./index.html');
+});
+
 
 app.post('/', async (request,response)=> {
     const {queryResult} = request.body;
@@ -34,5 +42,6 @@ app.post('/', async (request,response)=> {
 
     response.json(res);
 });
+
 
 app.listen(port || 3000);
