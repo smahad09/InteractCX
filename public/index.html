@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
     <title>Hello!</title>
 </head>
 <body>
-    <img src="home.jpg" alt="">
-    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/c1165d6d-a2ac-48fc-90e6-3fe5eae2ff85"></iframe>
+    <div class="parent">
+        <div class="left">
+            <div class="stuff">
+                <h1 class="heading">Hello, <span id="comp">InteractCX!</span></h1>
+                <p class="subtitle">To Mahad's REST API hosted on heroku</p>
+                <p class="content">Scroll down to use the dialogflow bot, and test it for yourself</p>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <img src="logo.jpg" alt="" class="image">
+
+        </div>
+    </div>
+
+    
+    <iframe width="450" height="500" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/c1165d6d-a2ac-48fc-90e6-3fe5eae2ff85"></iframe>
 
 </body>
 </html>
